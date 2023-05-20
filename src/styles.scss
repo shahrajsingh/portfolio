@@ -1,4 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.flex-1 {
+    flex-grow: 1;
+}
+
+.desktop{
+    display: initial;
+}
+
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: initial;
+    }
+}
