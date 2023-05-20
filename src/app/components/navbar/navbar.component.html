@@ -1,7 +1,66 @@
 <div id="navbar">
-    <img id="avatar" src="https://material.angular.io/assets/img/examples/shiba1.jpg">
-    <span id="title">
-        Shahraj Singh
-    </span>
-    <span id="title-trailer">&nbsp;/ Software Engineer</span>
+  <img id="avatar" src="assets/images/avatar.jpg" />
+  <span id="title"> Shahraj Singh </span>
+  <span id="title-trailer" class="desktop">&nbsp;/ Software Developer</span>
+  <span class="flex-1 desktop"></span>
+  <br class="mobile" />
+  <p id="title-trailer" class="mobile">Software Developer</p>
+  <div id="nav-links-container" class="desktop">
+    <a
+      class="nav-link-item"
+      routerLink="/about"
+      routerLinkActive="nav-link-item-active"
+      >ABOUT</a
+    >
+    <a
+      class="nav-link-item"
+      routerLink="/projects"
+      routerLinkActive="nav-link-item-active"
+      >PROJECTS</a
+    >
+    <a
+      class="nav-link-item"
+      routerLink="/contact"
+      routerLinkActive="nav-link-item-active"
+      >CONTACT</a
+    >
+  </div>
+  <div
+    id="nav-links-container-mobile"
+    [@dropdown]="mobileMenuVisible ? 'down' : 'up'"
+    class="mobile"
+  >
+    <div
+      class="mobile-nav-inner-container"
+      [@navLinksVisible]="mobileMenuVisible ? 'visible' : 'hidden'"
+    >
+      <a
+        class="nav-link-item"
+        routerLink="/about"
+        routerLinkActive="nav-link-item-active"
+        >ABOUT</a
+      >
+      <a
+        class="nav-link-item"
+        routerLink="/projects"
+        routerLinkActive="nav-link-item-active"
+        >PROJECTS</a
+      >
+      <a
+        class="nav-link-item"
+        routerLink="/contact"
+        routerLinkActive="nav-link-item-active"
+        >CONTACT</a
+      >
+    </div>
+  </div>
+  <button
+    id="navbar-menu-button"
+    class="menu-button mobile"
+    (click)="onButtonClick()"
+  >
+    <hr class="menu-line t" />
+    <hr class="menu-line m" />
+    <hr class="menu-line b" />
+  </button>
 </div>
